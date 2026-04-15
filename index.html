@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- CABEÇALHO -->
+    <header class="header">
+      <h1>Minha Lista de Tarefas</h1>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+      
+      <!-- FORMULÁRIO -->
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading">Adicionar nova tarefa</h2>
+
+        <form class="task-form" novalidate>
+          
+          <!-- INPUT -->
+          <div class="input-group">
+            <label for="task-input">Descrição da tarefa</label>
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Digite sua tarefa..."
+              required
+            />
+          </div>
+
+          <!-- PRIORIDADE -->
+          <div class="input-group">
+            <label for="priority-select">Prioridade</label>
+            <select id="priority-select" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="alta">Alta</option>
+              <option value="media">Média</option>
+              <option value="baixa">Baixa</option>
+            </select>
+          </div>
+
+          <!-- BOTÃO -->
+          <div class="input-group">
+            <button type="submit" class="btn-add">
+              Adicionar tarefa
+            </button>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- LISTA -->
+      <section class="list-section" aria-labelledby="list-heading">
+        <h2 id="list-heading">Tarefas</h2>
+
+        <ul class="task-list">
+          <!-- tarefas serão adicionadas via JS -->
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <p>To-Do List &mdash; Desenvolvido com HTML, CSS e JS</p>
+    </footer>
+
+    <!-- JS (SEMPRE NO FINAL) -->
+    <script src="script.js"></script>
+  </body>
+</html>
